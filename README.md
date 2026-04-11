@@ -13,11 +13,17 @@ However, Apache Parquet file format would be better for several reasons:
 ### Solution
 
 This CSV to Parquet Converter solves this problem as follows:
+<br />
 First, it asks the user for a CSV file as an input.
+<br />
 Then it validates the CSV file and if the file passes the validation, converts it into Parquet format.
+<br />
 Next, it does in-memory validation to validate the Parquet file it made.
+<br />
 If and only if the Parquet file passes the validation, the application writes the file in the same folder as the original CSV file.
+<br />
 (If a Parquet file with the same name exists already, user is asked if he/she wants the file to be overwritten.
+<br />
 Then the application displays the sizes of the files and tells in percentages the relative size of the Parquet file.
 
 ### Testing
