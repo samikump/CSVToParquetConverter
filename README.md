@@ -25,4 +25,4 @@ Then the application displays the sizes of the files and tells in percentages th
 I tested the application with City of Helsinki Purchase Data Set for the year of 2017 (availabe on avoindata.fi).
 The result is very encouraging:
 
-![Conversion_example](images/Parquet_example.png)
+![Conversion_example](images/success_example.png)
