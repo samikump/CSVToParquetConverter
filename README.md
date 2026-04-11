@@ -1,34 +1,25 @@
 ## CSV to Parquet Converter
 
-A Java application designed to convert CSV files into Apache Parquet files
+A Java application designed to convert CSV files into Apache Parquet format.
 
 ### But Why?
 
-Nowadays, many companies and organizations share their data in CSV file format.
-However, Apache Parquet file format would be better for several reasons:
-- As Parquet stores data by column instead of row, similar data is grouped together, resulting in much better compression
-- Parquet preserves data types (doubles, integers, strings, dates) while CSV treats everything as text
-- Parquet offers significantly faster read performance by loading only necessary columns
+Nowadays, many companies and organizations share their data in CSV format. However, the Apache Parquet format is often superior for several reasons:
+- **Better Compression:** Since Parquet stores data columnarly, similar data is grouped together, resulting in much higher compression ratios.
+- **Type Safety:** Parquet preserves data types (doubles, integers, strings, dates), whereas CSV treats everything as text.
+- **Performance:** Parquet offers significantly faster read performance by loading only the necessary columns.
 
-### Solution
+### How it Works
 
-This CSV to Parquet Converter solves this problem as follows:
-<br />
-First, it asks the user for a CSV file as an input.
-<br />
-Then it validates the CSV file and if the file passes the validation, converts it into Parquet format.
-<br />
-Next, it does in-memory validation to validate the Parquet file it made.
-<br />
-If and only if the Parquet file passes the validation, the application writes the file in the same folder as the original CSV file.
-<br />
-(If a Parquet file with the same name exists already, user is asked if he/she wants the file to be overwritten.
-<br />
-Then the application displays the sizes of the files and tells in percentages the relative size of the Parquet file.
+1. **Input:** The application prompts the user to select a CSV file.
+2. **Validation:** It validates the CSV structure before starting the conversion.
+3. **In-memory Check:** After conversion, it performs an in-memory validation of the generated Parquet data.
+4. **Output:** If the validation passes, the Parquet file is saved in the same directory as the source. 
+   - *Note: If a file with the same name already exists, the user is prompted to overwrite it.*
+5. **Results:** Finally, the application displays the file sizes and the calculated compression percentage.
 
 ### Testing
 
-I tested the application with City of Helsinki Purchase Data Set for the year of 2017 (availabe on avoindata.fi).
-The result is very encouraging:
+I tested the application using the **City of Helsinki Purchase Dataset (2017)** from *avoindata.fi*. The result demonstrates the efficiency of the conversion:
 
-![Conversion_example](images/success_example.png)
+![Conversion Example](images/success_example.png)
