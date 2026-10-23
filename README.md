@@ -23,3 +23,8 @@ Nowadays, many companies and organizations share their data in CSV format. Howev
 I tested the application using the **City of Helsinki Purchase Dataset (2017)** from *avoindata.fi*. The result demonstrates the efficiency of the conversion:
 
 ![Conversion Example](images/success_example.png)
+
+### 🚀 How to run it
+*   Open the project in NetBeans (or your preferred IDE).
+*   Clean and Build the project using Maven.
+*   Run the `CSVToParquetConverter` class to start the app.
